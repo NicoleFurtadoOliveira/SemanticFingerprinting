@@ -3,23 +3,34 @@
 This app is an example of natural language processing (NLP). It uses TF-IDF (Term Frequency-Inverse Document Frequency) and cosine similarity to perform text analysis and comparison using the 20 Newsgroups dataset, providing the similarity between two selected documents based on their content. It can be interacted with through a Streamlit UI and ran containerized using Docker.
 
 
+
 ## No docker setup by creating a virtual environment
 python3 -m venv SemanticFingerprinting
+
 source SemanticFingerprinting/bin/activate
+
 cd SemanticFingerprinting
+
 pip install scikit-learn   
+
 pip install streamlit
+
 ...
+
 deactivate  # When done
+
 
 
 ## No docker run
 streamlit run similarity_checker.py
 
 
+
 ## Docker build and run
 docker build -t streamlit-similarity-app .
+
 docker run -p 8501:8501 streamlit-similarity-app
+
 
 
 ## Example interpretation
@@ -43,6 +54,7 @@ Document 1 discusses topics related to motorcycles, riding techniques, and regul
 This low score suggests that these documents don’t share common themes, topics, or language patterns, which aligns with the distinct subjects in each document.
 
 
+
 ## Code explanation
 
 This code uses the 20 Newsgroups dataset to compare documents and give users the similarity between two selected documents based on their content.
@@ -64,6 +76,7 @@ categories = [
     'sci.med', 'sci.space', 'soc.religion.christian', 'talk.politics.guns', 
     'talk.politics.mideast', 'talk.politics.misc', 'talk.religion.misc']
     
+
 
 ## Theory explanation 
 
